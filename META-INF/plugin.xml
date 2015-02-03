@@ -1,43 +1,52 @@
 <idea-plugin version="2">
-  <id>com.yourcompany.unique.plugin.id</id>
-  <name>Plugin display name here</name>
-  <version>1.0</version>
-  <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+    <id>org.brent.idealearn</id>
+    <name>Brent idea learn demo</name>
+    <version>1.0</version>
+    <vendor url="https://github.com/go-lang-plugin-org/go-lang-idea-plugin"/>
 
-  <description><![CDATA[
-      Enter short description for your plugin here.<br>
-      <em>most HTML tags may be used</em>
+    <description><![CDATA[
+      <h2>Brent idea learn demo.</h2>
     ]]></description>
 
-  <change-notes><![CDATA[
-      Add change notes here.<br>
-      <em>most HTML tags may be used</em>
+    <change-notes><![CDATA[
+      <h3>1.0.0 changes:</h3>
+        <ul>
+            <li>[improvement] Fully reworked internals</li>
+        </ul>
     ]]>
-  </change-notes>
+    </change-notes>
 
-  <!-- please see http://confluence.jetbrains.com/display/IDEADEV/Build+Number+Ranges for description -->
-  <idea-version since-build="131"/>
+    <!-- please see http://confluence.jetbrains.com/display/IDEADEV/Build+Number+Ranges for description -->
+    <idea-version since-build="138.2210"/>
 
-  <!-- please see http://confluence.jetbrains.com/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
-       on how to target different products -->
-  <!-- uncomment to enable plugin in all products
-  <depends>com.intellij.modules.lang</depends>
-  -->
+    <!-- please see http://confluence.jetbrains.com/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+    <depends>com.intellij.modules.lang</depends>
 
-  <extensions defaultExtensionNs="com.intellij">
-    <!-- Add your extensions here -->
-  </extensions>
+    <module-components>
+        <component>
+            <implementation-class>org.brent.learn.ModuleLibrariesInitializer</implementation-class>
+        </component>
+    </module-components>
 
-  <application-components>
-    <!-- Add your application components here -->
-  </application-components>
 
-  <project-components>
-    <!-- Add your project components here -->
-  </project-components>
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
 
-  <actions>
-    <!-- Add your actions here -->
-  </actions>
+    <application-components>
+        <!-- Add your application components here -->
+    </application-components>
+
+    <project-components>
+        <!-- Add your project components here -->
+    </project-components>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
 
 </idea-plugin>
