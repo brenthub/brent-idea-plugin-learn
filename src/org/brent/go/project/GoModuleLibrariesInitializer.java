@@ -1,4 +1,4 @@
-package org.brent.learn;
+package org.brent.go.project;
 
 import com.intellij.openapi.diagnostic.Logger;
 import com.intellij.openapi.module.Module;
@@ -11,9 +11,9 @@ import org.jetbrains.annotations.NotNull;
 /**
  * Created by brent on 2015/2/3.
  */
-public class ModuleLibrariesInitializer implements ModuleComponent {
+public class GoModuleLibrariesInitializer implements ModuleComponent {
 
-    private final static Logger LOG = Logger.getInstance(ModuleLibrariesInitializer.class);
+    private final static Logger LOG = Logger.getInstance(GoModuleLibrariesInitializer.class);
 
     private VirtualFileAdapter myFilesListener=new VirtualFileAdapter() {
 
@@ -55,7 +55,7 @@ public class ModuleLibrariesInitializer implements ModuleComponent {
 
     private final Alarm myAlearm;
 
-    public ModuleLibrariesInitializer(Module module) {
+    public GoModuleLibrariesInitializer(Module module) {
         this.myModule=module;
         this.myAlearm = new Alarm(Alarm.ThreadToUse.POOLED_THREAD,myModule);
     }
@@ -77,6 +77,7 @@ public class ModuleLibrariesInitializer implements ModuleComponent {
     @Override
     public void projectOpened() {
         //do nothing
+
     }
 
     @Override
@@ -92,10 +93,7 @@ public class ModuleLibrariesInitializer implements ModuleComponent {
     @Override
     public void initComponent() {
         //do nothing
-        LOG.error("initComponent...");
-        LOG.info("initComponent info");
-        LOG.warn("initComponent warn");
-        System.out.printf("sysout initComponent...");
+        LOG.info("initComponent...");
     }
 
     @Override

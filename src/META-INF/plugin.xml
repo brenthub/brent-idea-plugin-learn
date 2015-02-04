@@ -28,7 +28,7 @@
 
     <module-components>
         <component>
-            <implementation-class>org.brent.learn.ModuleLibrariesInitializer</implementation-class>
+            <implementation-class>org.brent.go.project.GoModuleLibrariesInitializer</implementation-class>
         </component>
     </module-components>
 
