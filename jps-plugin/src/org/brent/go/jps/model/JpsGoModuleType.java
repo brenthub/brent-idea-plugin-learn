@@ -1,4 +1,4 @@
-package org.brent.go.project.jps.model;
+package org.brent.go.jps.model;
 
 import org.jetbrains.jps.model.JpsDummyElement;
 import org.jetbrains.jps.model.ex.JpsElementTypeWithDummyProperties;

@@ -1,10 +1,9 @@
-package org.brent.go.project.jps.builder;
+package org.brent.go.jps.builder;
 
 import com.intellij.openapi.diagnostic.Logger;
-import org.brent.go.project.jps.model.JpsGoModuleType;
+import org.brent.go.jps.model.JpsGoModuleType;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.jps.builders.BuildOutputConsumer;
-import org.jetbrains.jps.builders.BuildTarget;
 import org.jetbrains.jps.builders.BuildTargetType;
 import org.jetbrains.jps.builders.DirtyFilesHolder;
 import org.jetbrains.jps.incremental.CompileContext;

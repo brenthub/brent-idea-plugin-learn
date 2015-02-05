@@ -1,1 +1,1 @@
-com.goide.jps.model.JpsGoModelSerializerExtension
+org.brent.go.jps.model.JpsGoModelSerializerExtension

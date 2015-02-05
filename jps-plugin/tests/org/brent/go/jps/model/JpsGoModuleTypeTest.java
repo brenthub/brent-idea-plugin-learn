@@ -1,6 +1,4 @@
-package org.brent.go.project.jps.model;
-
-import static org.junit.Assert.*;
+package org.brent.go.jps.model;
 
 public class JpsGoModuleTypeTest {
 

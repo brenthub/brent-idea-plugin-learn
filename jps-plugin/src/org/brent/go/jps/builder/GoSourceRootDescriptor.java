@@ -1,4 +1,4 @@
-package org.brent.go.project.jps.builder;
+package org.brent.go.jps.builder;
 
 import org.jetbrains.jps.builders.BuildRootDescriptor;
 import org.jetbrains.jps.builders.BuildTarget;

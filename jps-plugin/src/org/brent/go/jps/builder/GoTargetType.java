@@ -1,6 +1,6 @@
-package org.brent.go.project.jps.builder;
+package org.brent.go.jps.builder;
 
-import org.brent.go.project.jps.model.JpsGoModuleType;
+import org.brent.go.jps.model.JpsGoModuleType;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.jps.builders.BuildTargetLoader;
 import org.jetbrains.jps.builders.ModuleBasedBuildTargetType;
