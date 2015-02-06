@@ -49,15 +49,14 @@ public class GoModuleLibrariesInitializer implements ModuleComponent {
 
     private static final int UPDATE_DELAY=300;
 
-    private final Module myModule;
+    private final Module module;
 
 
-
-    private final Alarm myAlearm;
+    private final Alarm alarm;
 
     public GoModuleLibrariesInitializer(Module module) {
-        this.myModule=module;
-        this.myAlearm = new Alarm(Alarm.ThreadToUse.POOLED_THREAD,myModule);
+        this.module = module;
+        this.alarm = new Alarm(Alarm.ThreadToUse.POOLED_THREAD, this.module);
     }
 
     public void scheduleUpdate(){
@@ -65,13 +64,13 @@ public class GoModuleLibrariesInitializer implements ModuleComponent {
     }
 
     public void scheduleUpdate(int delay) {
-        myAlearm.addRequest(new Runnable() {
+        alarm.addRequest(new Runnable() {
             @Override
             public void run() {
                 //
                 LOG.info("running...");
             }
-        },delay);
+        }, delay);
     }
 
     @Override

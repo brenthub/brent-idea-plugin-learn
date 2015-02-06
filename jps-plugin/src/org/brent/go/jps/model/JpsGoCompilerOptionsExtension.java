@@ -33,7 +33,7 @@ public class JpsGoCompilerOptionsExtension extends JpsCompositeElementBase<JpsGo
         return new JpsGoCompilerOptionsExtension(new GoCompilerOptions(options));
     }
 
-    public static JpsGoCompilerOptionsExtension getOrCreateExctension(JpsProject project) {
+    public static JpsGoCompilerOptionsExtension getOrCreateExtension(JpsProject project) {
         JpsGoCompilerOptionsExtension extension = project.getContainer().getChild(ROLE);
         if (extension == null) {
             extension = project.getContainer().setChild(ROLE, new JpsGoCompilerOptionsExtension(new GoCompilerOptions()));

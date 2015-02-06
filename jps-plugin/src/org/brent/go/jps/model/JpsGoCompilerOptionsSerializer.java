@@ -18,7 +18,7 @@ public class JpsGoCompilerOptionsSerializer extends JpsProjectExtensionSerialize
 
     @Override
     public void loadExtension(JpsProject jpsProject, Element element) {
-        JpsGoCompilerOptionsExtension extension = JpsGoCompilerOptionsExtension.getOrCreateExctension(jpsProject);
+        JpsGoCompilerOptionsExtension extension = JpsGoCompilerOptionsExtension.getOrCreateExtension(jpsProject);
         GoCompilerOptions options = XmlSerializer.deserialize(element, GoCompilerOptions.class);
         if (options != null) {
             extension.setOptions(options);

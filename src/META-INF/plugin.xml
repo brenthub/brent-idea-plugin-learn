@@ -35,6 +35,18 @@
 
     <extensions defaultExtensionNs="com.intellij">
         <!-- Add your extensions here -->
+
+        <!--project-->
+        <applicationService serviceImplementation="org.brent.go.project.GoApplicationLibrariesService"/>
+        <moduleService serviceImplementation="org.brent.go.project.GoModuleLibrariesService"/>
+        <projectService serviceImplementation="org.brent.go.project.GoProjectLibrariesService"/>
+
+        <internalFileTemplate name="Go Application"/>
+        <internalFileTemplate name="Go File"/>
+
+        <liveTemplateMacro implementation="org.brent.go.template.DirectoryNameMacro"/>
+        <defaultLiveTemplatesProvider implementation="org.brent.go.template.GoLiveTemplatesProvider"/>
+
     </extensions>
 
     <application-components>
@@ -46,7 +58,11 @@
     </project-components>
 
     <actions>
-        <!-- Add your actions here -->
+        <!-- Add your 菜单 here -->
+        <action class="org.brent.go.actions.GoCreateFileAction" id="Go.NewGoFile" text="Go File"
+                description="Create new Go file">
+            <add-to-group group-id="NewGroup" relative-to-action="NewFile" anchor="before"/>
+        </action>
     </actions>
 
 </idea-plugin>
